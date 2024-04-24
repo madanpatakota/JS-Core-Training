@@ -36,13 +36,15 @@ console.log(customerIDs);
 
 
 //Example 1 : 
-var customerIDs = [];
-var length = 10;
+var FruitsList = [];
+var FruitsLength = 10;
 
-for(var index = 0; index < length; index++){
-    customerIDs.push(index);  
+//       initlize     condition     update
+//        1              3           2
+for(var fruitNumber = 0; fruitNumber < FruitsLength; fruitNumber++){
+    FruitsList.push("Fruit - " + fruitNumber);  
 }
-console.log(customerIDs);
+console.log(FruitsList);
 
 
 
@@ -59,7 +61,5 @@ for(var index = 0; index < customerPrices.length; index++){
     totalPrice += customerPrices[0];
 }
 console.log(totalPrice);
-
-
 
 

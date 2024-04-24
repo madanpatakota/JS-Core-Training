@@ -2,6 +2,17 @@
 // Concept : switch statment;
 
 //Example : Checking the role in IT industry.
+
+var isItOK = true;
+if(isItOK){
+    console.log("Iam alright")
+}
+else{
+    console.log("Iam not good");
+}
+
+
+
 var role = "SE";
 
 if(role == "Trainee"){
@@ -12,15 +23,6 @@ else if(role == "SE"){
 }
 else if(role == "SSE"){
     console.log("He is a senior software engineer and having the 6 years of expereince")
-}
-else if(role == "TL"){
-    console.log("He is a Team Leader and having the 8 years of expereince")
-}
-else if(role == "Asst.MGR"){
-    console.log("He is a Assistant Manager and having the 10 years of expereince")
-}
-else if(role == "MGR"){
-    console.log("He is a  Manager and having more than 10 years of expereince")
 }
 else{
     console.log("Record is not matching. Please check with another value.");
@@ -62,27 +64,12 @@ switch(role){
     case "Trainee": 
         console.log("He is a fresher and having the no expereince.");
         break ;
-
     case "SE":
        console.log("He is a software engineer and having the 3 years of expereince");
        break ;
-    
     case "SSE":
         console.log("He is a senior software engineer and having the 6 years of expereince");
         break ;
-    
-    case "TL":
-        console.log("He is a Team Leader and having the 8 years of expereince");
-        break ;
-    
-    case "Asst.MGR":
-        console.log("He is a Assistant Manager and having the 10 years of expereince")
-        break ;
-    
-    case "MGR":
-        console.log("He is a  Manager and having more than 10 years of expereince");
-        break ;
-    
     default :
         console.log("Record is not matching. Please check with another value.");
 }

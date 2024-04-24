@@ -46,3 +46,25 @@ function first_method_two(){
 
 console.log(first_method_one());   // is a return type function
 console.log(first_method_two());  // is a non-return type function
+
+
+function ____________(){
+    //statement.......;
+    //statement.......;
+    //statement.......;
+}
+
+
+function performTask(FirstMessage , SecondMessage , ThirdMessage){
+    console.log(FirstMessage);
+    console.log(SecondMessage);
+    console.log(ThirdMessage);
+
+    var TotalMessage = FirstMessage + SecondMessage + ThirdMessage;
+    return TotalMessage;
+}
+
+var msg = performTask("Hello Goodmoring!!" , "How are you?" , "Whats up?" );
+console.log(msg);
+
+

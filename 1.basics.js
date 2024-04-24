@@ -1,4 +1,12 @@
 
+var CustomerID;
+    CustomerID = 1;
+
+    (or)
+
+var CustomerID = 1;
+
+
 // Q) How to write the logic for showing the output in console window?
 // A . console.log("hello world");
 
@@ -6,7 +14,7 @@
 
 
 
-// Inline comments or multi line comments contains anything but JS woul't be executed that
+// single comments or multi line comments contains anything but JS woul't be executed that
 //  commented here..here
 
 //  this work i have developed for adding the data to the customer
@@ -43,7 +51,7 @@ Q) So how to assign the data to the variable reference ?
 A: By using the Assignment operator  i.e. =
    CustomerID = 1
 
-Q) So complete syntax for data declaration ?
+Q) So  for data declaration ?
     var CustomerID
         CustomerID = 1
         (or)
@@ -86,7 +94,7 @@ Q) How to initilize the another data ?
 
 //============================================================================================
 // Q) What is the difference between these three var , let , const keywords
-// A: will explain when i am discussing about the scope
+// A: will explain when i am discussing about the scope while explain about the functions
 
 
 //=======================================================================================
