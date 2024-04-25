@@ -1,54 +1,48 @@
-/* Synchromous Operation*/
+/*Async and Await
+
+Async/await is a modern JavaScript feature that allows you to work with promises more easily. It allows you to write asynchronous code that looks synchronous,
+ making it easier to understand and maintain.
+*/
+
 async function cooking() {
   console.log("Cooking has started");
-  // Simulating cooking time synchronously
-  //here my work will be take 4 seconds
-  await setTimeout(() => {
-    console.log("Cooking has completed");
-  }, 4000);
-  // As of now i am giving the 4 seconds. I know cooking woud't be possible in 4 seconds 😜
+  await new Promise(resolve => setTimeout(resolve, 5000)); // Simulate cooking time of 5 seconds
+  console.log("Cooking has completed");
 }
 
-async function WashDishes() {
-  console.log("WashDishes has started");
-
-  //here my work will be take 10 seconds
-  await setTimeout(() => {
-    console.log("WashDishes has completed");
-  }, 10000);
-
-  // I know WashDishes woud't be possible in 10 seconds 😜
+async function washingDishes() {
+  console.log("Washing dishes has started");
+  await new Promise(resolve => setTimeout(resolve, 7000)); // Simulate washing dishes time of 7 seconds
+  console.log("Washing dishes has completed");
 }
 
-async function CleanFloor() {
-  console.log("CleanFloor has started");
-  // Simulating clean floor time synchronously
-  //here my work will be take 10 seconds
-  await setTimeout(() => {
-    console.log("CleanFloor has completed");
-  }, 6000);
-  // I know CleanFloor woud't be possible in 6 seconds 😜
+async function cleaningFloor() {
+  console.log("Cleaning the floor has started");
+  await new Promise(resolve => setTimeout(resolve, 5000)); // Simulate cleaning floor time of 5 seconds
+  console.log("Cleaning the floor has completed");
 }
 
-/* ASynchromous Operation By Async and Await*/
-
-async function LetsStartTheWorkByAsync() {
+async function startDay() {
   const startTime = new Date();
-  console.log("Start time in Async Call:", startTime);
+  console.log("Start time:", startTime);
 
- await cooking();
- await WashDishes();
- await CleanFloor();
+  await cooking();
+  await washingDishes();
+  await cleaningFloor();
 
   const endTime = new Date();
-  console.log("End time in Async Call::", endTime);
+  console.log("End time:", endTime);
 
   const totalTimeInSeconds = (endTime - startTime) / 1000;
-  console.log(
-    "Total time taken in Async Call::",
-    totalTimeInSeconds,
-    "seconds"
-  );
+  console.log("Total time taken:", totalTimeInSeconds, "seconds");
 }
 
-LetsStartTheWorkByAsync();
+startDay();
+
+/*Explanation:
+In the example provided, the async keyword is used to declare functions that will
+ execute asynchronously. Within these functions,
+  the await keyword is used to pause the execution of the function until a promise is resolved.
+   This allows you to write code that appears to execute sequentially, 
+even though it's actually asynchronous under the hood.
+*/

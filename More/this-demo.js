@@ -1,6 +1,6 @@
 /*
    this : 'this' is a keyword in Javascript which refers the current execution context(scope)
-   
+   PPT : 
    The way you can use the 'this' keyword
 
    - global context with this
