@@ -6,32 +6,29 @@ Async/await is a modern JavaScript feature that allows you to work with promises
 
 async function cooking() {
   console.log("Cooking has started");
-   await new Promise((resolve) =>
+  return await new Promise((resolve) =>
     setTimeout(() => {
-     resolve()
+      resolve("Cooking has done...");
     }, 5000)
   ); // Simulate cooking time of 5 seconds
-  console.log("Cooking has done");
 }
 
 async function washingDishes() {
   console.log("Washing dishes has started");
-   await new Promise((resolve) =>
+  return await new Promise((resolve) =>
     setTimeout(() => {
-      resolve();
+      resolve("washing dishes Done...");
     }, 14000)
   ); // Simulate washing dishes time of 7 seconds
-  console.log("Washing dishes has done");
 }
 
 async function cleaningFloor() {
   console.log("Cleaning the floor has started");
-   await new Promise((resolve) =>
+  return await new Promise((resolve) =>
     setTimeout(() => {
-      resolve();
+      resolve("Cleaning the floordone..."); 
     }, 8000)
   ); // Simulate cleaning floor time of 5 seconds
-  console.log("Cleaning the floor has done");
 }
 
 async function startDay() {
@@ -39,7 +36,15 @@ async function startDay() {
   console.log("Start time:", startTime);
 
   // Execute all tasks concurrently using Promise.all()
-  await Promise.all([cooking(), washingDishes(), cleaningFloor()]);
+  await Promise.all([cooking(), washingDishes(), cleaningFloor()]).then(
+    (values) => {
+      // Values is an array containing the resolved values from each promise
+      console.log("Resolved values:");
+      console.log(values[0]); // Value from cooking()
+      console.log(values[1]); // Value from washingDishes()
+      console.log(values[2]); // Value from cleaningFloor()
+    }
+  );
 
   const endTime = new Date();
   console.log("End time:", endTime);
