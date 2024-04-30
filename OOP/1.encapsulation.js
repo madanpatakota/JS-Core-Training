@@ -1,5 +1,8 @@
 /*
-Encapsulation in JavaScript refers to bundling the data (properties) and methods (functions) that operate on the data within a single unit, often called a class or an object. This helps in hiding the internal state of an object and only exposing the necessary functionalities to the outside world. Here's an example of encapsulation in JavaScript:
+Encapsulation in JavaScript refers to bundling the data (properties) and methods (functions) 
+that operate on the data within a single unit, often called a class or an object.
+ This helps in hiding the internal state of an object and only exposing the necessary 
+ functionalities to the outside world.
 */
 
 class School {

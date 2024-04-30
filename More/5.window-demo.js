@@ -1,3 +1,6 @@
+
+console.log("What is this here" , this);
+
 /*Returns the inner width and height of the browser window, excluding toolbars and scrollbars.*/
 console.log("Inner width: " + window.innerWidth + "px");
 console.log("Inner height: " + window.innerHeight + "px");
@@ -41,6 +44,8 @@ it automatically refers to window.alert().*/
 
 /* a function after a specified delay, in milliseconds.*/
 window.setTimeout(function() {
+
+    
     console.log("Delayed message");
 }, 2000); // Executes after 2 seconds
 
