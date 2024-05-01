@@ -3,6 +3,9 @@ Encapsulation in JavaScript refers to bundling the data (properties) and methods
 that operate on the data within a single unit, often called a class or an object.
  This helps in hiding the internal state of an object and only exposing the necessary 
  functionalities to the outside world.
+
+
+ Discuss about the class 
 */
 
 class School {

@@ -13,17 +13,21 @@
 //   Add(10, 20);                                            ////
 // }                                                }
 
-function Perfrom(callbackfn) {
-  console.log("Test a executed");
+function Perfrom(value1 , value2 ,callbackfn) {
+  console.log("Perform task has executed...calling the callback function");
   callbackfn();
 }
+
+// var testCallBackfn = function(){
+// your code .......
+// }
 
 function Add(value1, value2) {
   console.log("Test b executed", value1, value2);
 }
 
 function CallingTest() {
-  Perfrom(function () {
+  Perfrom(10 , 20 , function () {
     Add(10, 20);
   });
 }
@@ -31,6 +35,8 @@ function CallingTest() {
 CallingTest();
 
 //==================================================================================
+
+
 function cooking(callback) {
   console.log("Cooking has started");
   setTimeout(() => {
@@ -55,11 +61,12 @@ function cleaningFloor(callback) {
   }, 5000); // Simulate cleaning the floor time of 5 seconds
 }
 
-// Execute tasks sequentially using callbacks
-cooking(() => {
-  washingDishes(() => {
-    cleaningFloor(() => {
-      console.log("All tasks completed!");
-    });
-  });
-});
+
+// ***************************Execute tasks sequentially using callbacks********************
+// cooking(() => {
+//   washingDishes(() => {
+//     cleaningFloor(() => {
+//       console.log("All tasks completed!");
+//     });
+//   });
+// });

@@ -5,7 +5,7 @@
    functionality, promoting simplicity, modularity, and maintainability in code. 
 */
 
-// Define a BankAccount class
+// Define a BankAccount class and As a user he is not aware processing of the cash like withdraw deposit balance. with out knowing that he can see the output.
 class BankAccount {
   constructor(accountNumber, initialBalance, ownerName) {
     this.accountNumber = accountNumber;
