@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Examples</title>
+</head>
+<body>
+  <!-- Inline JavaScript -->
+  <button id="btnID1" onclick="alert('From Button 1 – Inline JavaScript')">
+    Click Me 1
+  </button>
+
+  <!-- Internal JavaScript -->
+  <button id="btnID2" onclick="showInternalMessage()">
+    Click Me 2
+  </button>
+
+  <!-- External JavaScript -->
+  <button id="btnID3" onclick="showExternalMessage()">
+    Click Me 3
+  </button>
+
+  <script>
+    function showInternalMessage() {
+      alert('From Button 2 – Internal JavaScript');
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
