@@ -6,5 +6,8 @@ function showExternalMessage() {
     console.log("Welcome to MISARD");
     console.warn("Please check your details");
     console.error("Unable to load the data");
+
+
+    
     
 }
