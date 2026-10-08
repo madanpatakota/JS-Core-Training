@@ -37,6 +37,7 @@ accountBalance = accountBalance - withdrawalAmount;
 console.log("Balance After Withdrawal:", accountBalance);
 
 
+
 // Example 4: Redeclaring a variable using var
 var orderStatus = "Pending";
 console.log("Order Status:", orderStatus);

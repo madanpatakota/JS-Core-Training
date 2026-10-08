@@ -6,9 +6,9 @@ function DownloadVideo(callbackFn) {
 
     setTimeout(() => {
         console.log(`${workName} has downloaded successfully 📥`);
-
         // Start the next activity.
         callbackFn();
+        
     }, 8000);
 }
 
