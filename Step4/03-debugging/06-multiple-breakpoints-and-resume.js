@@ -1,32 +1,45 @@
-// Multiple debugger statements act like multiple checkpoints.
+// 🚗 Car starts its journey.
+let carNumber = "KA-01-1234";
+let itemsInCar = ["Clothes", "Books"];
 
-let foodItemName = "Pizza";
-console.log("Food Item:", foodItemName);
+console.log("🚗 Car started its journey");
 
-// Checkpoint 1
+// 🛑 Checkpoint 1: inspect the current items.
 debugger;
+console.log("👮 Checkpoint 1:", itemsInCar);
 
-let deliveryLocation = "Delhi";
-console.log("Delivery Location:", deliveryLocation);
+// A laptop is added before the next checkpoint.
+itemsInCar.push("Laptop");
+console.log("🚗 Car is travelling to Checkpoint 2");
 
-// Checkpoint 2
+// 🛑 Checkpoint 2: inspect the updated items.
 debugger;
+console.log("👮 Checkpoint 2:", itemsInCar);
 
-let estimatedTime = "20 Minutes";
-console.log("Estimated Delivery Time:", estimatedTime);
+// Books are removed before the next checkpoint.
+itemsInCar.splice(1, 1);
+console.log("🚗 Car is travelling to Checkpoint 3");
 
-// Checkpoint 3
+// 🛑 Checkpoint 3: inspect the remaining items.
 debugger;
+console.log("👮 Checkpoint 3:", itemsInCar);
 
-let isDeliveryAvailable = true;
-console.log("Delivery Available:", isDeliveryAvailable);
+console.log("🏁 Car reached its destination");
 
-console.log("Order details completed.");
+/*
+Practice:
+1. Open Developer Tools and run the script.
+2. At Checkpoint 1, inspect itemsInCar:
+   ["Clothes", "Books"]
+3. Click Resume to continue to Checkpoint 2:
+   ["Clothes", "Books", "Laptop"]
+4. Click Resume to continue to Checkpoint 3:
+   ["Clothes", "Laptop"]
+5. Click Resume again to finish the journey.
 
-// Practice:
-// Use Resume to continue until the next checkpoint.
-// At each checkpoint, inspect the variables already assigned.
+You can also remove the debugger statements and set
+breakpoints by clicking line numbers in the Sources panel.
 
-// To practice clicking line numbers in Sources:
-// Comment out the debugger statements,
-// then click a statement's line number to add a breakpoint.
+Resume runs until the next breakpoint, debugger statement,
+or the end of execution.
+*/

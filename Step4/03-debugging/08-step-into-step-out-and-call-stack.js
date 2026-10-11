@@ -1,46 +1,47 @@
-let foodItemName = "Pizza";
+// 🚗 Details the inspector will check
+let carNumber = "KA-01-1234";
+let itemsInCar = ["Clothes", "Books", "Laptop"];
 
-function foodApp(item) {
-    console.log("Food Application");
-    console.log("Food Item:", item);
+function inspectCar(number, items) {
+    console.log("🚗 Car stopped at the checkpoint");
+    console.log("Car Number:", number);
 
-    // Step Into here to enter logMessage.
-    logMessage(item);
+    // Step Into here to enter checkItems.
+    checkItems(items);
 
-    console.log("Back inside foodApp");
+    console.log("✅ Inspection completed");
+    console.log("🚗 Car can continue its journey");
 }
 
-function logMessage(item) {
-    console.log("You have ordered:", item);
+function checkItems(items) {
+    console.log("👮 Inspector is checking the items");
+    console.log("Items in the car:", items);
 
-    // While paused inside this function,
-    // inspect the Call Stack panel.
-    // logMessage appears above foodApp.
+    // Inspect the Call Stack while paused here:
+    // checkItems
+    // inspectCar
+    // Global script (the label may vary)
 
-    console.log("Your order has been received.");
+    console.log("✅ Items checked");
 }
 
-// Pause before calling foodApp.
+// 🛑 Checkpoint: pause execution
 debugger;
 
-foodApp(foodItemName);
+inspectCar(carNumber, itemsInCar);
 
-let deliveryLocation = "Delhi";
-console.log("Delivery Location:", deliveryLocation);
-
-let estimatedTime = "20 Minutes";
-console.log("Estimated Delivery Time:", estimatedTime);
-
-let isDeliveryAvailable = true;
-console.log("Delivery Available:", isDeliveryAvailable);
+console.log("🏁 Car reached its destination");
 
 /*
 Practice:
-1. Pause at the foodApp call.
-2. Step Into enters foodApp.
-3. Step Over executes statements without entering called functions.
-4. At logMessage(item), Step Into enters logMessage.
-5. Inspect item and the Call Stack.
-6. Step Out finishes logMessage and returns to foodApp.
-7. Resume continues execution until another breakpoint or completion.
+1. Run the script with Developer Tools open.
+2. Execution pauses at debugger.
+3. Use Step Over to reach inspectCar(...).
+4. Use Step Into to enter inspectCar.
+5. Use Step Over to execute statements one by one.
+6. At checkItems(items), use Step Into.
+7. Inspect the items variable and the Call Stack.
+8. Use Step Out to finish checkItems and return to inspectCar.
+9. Use Step Out again to finish inspectCar.
+10. Use Resume to run the remaining code.
 */

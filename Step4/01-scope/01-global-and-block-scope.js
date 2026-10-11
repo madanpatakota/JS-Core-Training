@@ -1,37 +1,54 @@
-// Global scope: declared outside all functions and blocks.
-var greenColor = "Green";
+// ==================================================
+// Global Scope
+// ==================================================
 
-console.log("Global Scope:", greenColor);
+let globalColor = "Yellow";
 
-// Block 1
+console.log("%cGlobal Scope", "color:yellow");
+console.log("globalColor =", globalColor);
+
+
+// ==================================================
+// Local Block 1
+// ==================================================
+
 {
-    // This block can access the global variable.
-    console.log("Block 1 - Global Color:", greenColor);
+    // Global variables can be accessed inside local blocks.
+    console.log("%cLocal Block 1", "color:deepskyblue");
+    console.log("globalColor =", globalColor);
 
-    // let creates a variable scoped to this block.
-    let blueColor = "Blue";
-    console.log("Block 1 - Local Color:", blueColor);
+    // local1 exists only within Block 1.
+    let local1 = "Blue";
+    console.log("local1 =", local1);
 
-    // Block 1 cannot access a variable declared inside Block 2.
-    // console.log(pinkColor); // ReferenceError
+    // console.log(local2); // ReferenceError
 }
 
-// Block 2
+
+// ==================================================
+// Local Block 2
+// ==================================================
+
 {
-    console.log("Block 2 - Global Color:", greenColor);
+    // Global variables can be accessed inside local blocks.
+    console.log("%cLocal Block 2", "color:hotpink");
+    console.log("globalColor =", globalColor);
 
-    let pinkColor = "Pink";
-    console.log("Block 2 - Local Color:", pinkColor);
+    // local2 exists only within Block 2.
+    let local2 = "Pink";
+    console.log("local2 =", local2);
 
-    // Block 2 cannot access a variable declared inside Block 1.
-    // console.log(blueColor); // ReferenceError
+    // console.log(local1); // ReferenceError
 }
 
-// The global variable is still accessible.
-console.log("Outside Both Blocks:", greenColor);
 
-// Block variables are not accessible outside their blocks.
-// Uncomment ONE line at a time to demonstrate the error.
+// ==================================================
+// Back To Global Scope
+// ==================================================
 
-// console.log(blueColor); // ReferenceError
-// console.log(pinkColor); // ReferenceError
+console.log("%cBack To Global Scope", "color:yellow");
+console.log("globalColor =", globalColor);
+
+// Block-scoped variables cannot be accessed here.
+// console.log(local1); // ReferenceError
+// console.log(local2); // ReferenceError

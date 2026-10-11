@@ -1,23 +1,32 @@
-// This example intentionally calls a function without an argument.
+// 👮 The inspector needs the car number and driver name.
+function inspectCar(carNumber, driverName) {
+    // 🛑 Pause and inspect both parameters.
+    debugger;
 
-let foodItemName = "Pizza";
+    console.log("Car Number:", carNumber);
+    console.log("Driver Name:", driverName);
 
-function foodApp(item) {
-    console.log("Food Application");
-    console.log("Food Item:", item);
+    console.log("✅ Inspection completed");
 }
 
-// Pause before the function call.
-debugger;
+// ❌ Mistake: the driverName argument is missing.
+inspectCar("KA-01-1234");
 
-// Use Step Into to enter foodApp.
-// Inspect item: its value is undefined.
-foodApp();
+// ✅ Fix: pass both arguments.
+// Comment out the incorrect call above, then run this:
+// inspectCar("KA-01-1234", "Madan");
 
-// Fix:
-// Replace foodApp(); above with:
-// foodApp(foodItemName);
+/*
+Practice:
+1. Open Developer Tools and run the script.
+2. Execution pauses inside inspectCar.
+3. Inspect the parameters in the Scope panel:
+   carNumber = "KA-01-1234"
+   driverName = undefined
+4. The second argument is missing, so driverName is undefined.
+5. Fix the call by passing "Madan" as the second argument.
+6. Run again and check that driverName is now "Madan".
 
-// Save and refresh.
-// Step into the function again.
-// Now item contains "Pizza".
+JavaScript allows missing arguments.
+Debugging helps us identify when a required value is missing.
+*/
