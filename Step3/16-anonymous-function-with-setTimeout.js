@@ -10,6 +10,7 @@ setTimeout(function () {
     console.log("This message appears after approximately 3 seconds.");
 }, 3000);
 
+
 // JavaScript continues without waiting for the timer.
 console.log("After setTimeout");
 

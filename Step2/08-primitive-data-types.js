@@ -58,7 +58,6 @@ console.log("Selected Product Type:", typeof selectedProduct); // object
 
 
 let selectedProduct1 = null;
-
 console.log(typeof selectedProduct1); // "object"
 
 // Check for null directly using ===

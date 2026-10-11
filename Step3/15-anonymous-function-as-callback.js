@@ -10,7 +10,7 @@ function sayHello(callbackFunction) {
 }
 
 // Pass an anonymous function as an argument.
-sayHello(function (firstNumber, secondNumber) {
+sayHello(function(firstNumber, secondNumber) {
     console.log("Hello, world!");
     console.log("First Number:", firstNumber);   // 10
     console.log("Second Number:", secondNumber); // 20

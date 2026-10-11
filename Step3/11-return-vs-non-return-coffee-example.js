@@ -13,7 +13,6 @@ console.log("Customer received:", customerCoffee);
 
 
 // Example 2: Perform an action without an explicit return.
-
 function announceCoffeeReady() {
     console.log("Coffee ready! Please collect your order.");
 }

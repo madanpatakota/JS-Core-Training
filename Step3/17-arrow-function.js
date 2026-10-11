@@ -1,27 +1,40 @@
-// Arrow functions use => instead of the function keyword.
+// ==================================================
+// Example 1: Without Parameters
+// ==================================================
 
-// --------------------------------------------------
-// Example 1: Without parameters
-// --------------------------------------------------
+// Regular Function
+function showAuthorNameRegular() {
+    console.log("Author Name: Rabindranath Tagore");
+}
 
-// Regular function:
-// function showAuthorName() {
-//     console.log("Author Name: Rabindranath Tagore");
-// }
-
-// Arrow function:
-let showAuthorName = () => {
+// Arrow Function
+const showAuthorNameArrow = () => {
     console.log("Author Name: Rabindranath Tagore");
 };
 
-showAuthorName();
+showAuthorNameRegular();
+showAuthorNameArrow();
 
 
-// --------------------------------------------------
-// Example 2: With multiple parameters
-// --------------------------------------------------
+// ==================================================
+// Example 2: With Multiple Parameters
+// ==================================================
 
-let showAuthorDetails = (
+// Regular Function
+function showAuthorDetailsRegular(
+    authorName,
+    dateOfBirth,
+    bookName,
+    publishedYear
+) {
+    console.log("Author Name:", authorName);
+    console.log("Date of Birth:", dateOfBirth);
+    console.log("Book Name:", bookName);
+    console.log("Published Year:", publishedYear);
+}
+
+// Arrow Function
+const showAuthorDetailsArrow = (
     authorName,
     dateOfBirth,
     bookName,
@@ -33,7 +46,14 @@ let showAuthorDetails = (
     console.log("Published Year:", publishedYear);
 };
 
-showAuthorDetails(
+showAuthorDetailsRegular(
+    "Rabindranath Tagore",
+    "May 7, 1861",
+    "The Gardener",
+    1913
+);
+
+showAuthorDetailsArrow(
     "Rabindranath Tagore",
     "May 7, 1861",
     "The Gardener",
@@ -41,13 +61,22 @@ showAuthorDetails(
 );
 
 
-// --------------------------------------------------
-// Example 3: With an explicit return value
-// --------------------------------------------------
+// ==================================================
+// Example 3: Explicit Return Value
+// ==================================================
 
-// When using a block {}, write return to send back a value.
+// Regular Function
+function getAuthorDetailsRegular(
+    authorName,
+    dateOfBirth,
+    bookName,
+    publishedYear
+) {
+    return `Author Details: ${authorName} | ${dateOfBirth} | ${bookName} | ${publishedYear}`;
+}
 
-let getAuthorDetails = (
+// Arrow Function
+const getAuthorDetailsArrow = (
     authorName,
     dateOfBirth,
     bookName,
@@ -56,59 +85,83 @@ let getAuthorDetails = (
     return `Author Details: ${authorName} | ${dateOfBirth} | ${bookName} | ${publishedYear}`;
 };
 
-// Store the returned string.
-let authorDetails = getAuthorDetails(
-    "Munshi Premchand",
-    "July 31, 1880",
-    "Nirmala",
-    1927
+console.log(
+    getAuthorDetailsRegular(
+        "Munshi Premchand",
+        "July 31, 1880",
+        "Nirmala",
+        1927
+    )
 );
 
-console.log(authorDetails);
+console.log(
+    getAuthorDetailsArrow(
+        "Munshi Premchand",
+        "July 31, 1880",
+        "Nirmala",
+        1927
+    )
+);
 
 
-// --------------------------------------------------
-// Example 4: Short form with an implicit return
-// --------------------------------------------------
+// ==================================================
+// Example 4: Short Form / Implicit Return
+// ==================================================
 
-// For a single expression, we can omit {} and return.
+// Regular Function
+function getAuthorMessageRegular(authorName) {
+    return `Author Name: ${authorName}`;
+}
 
-let getAuthorMessage = (authorName) => `Author Name: ${authorName}`;
+// Arrow Function
+const getAuthorMessageArrow = authorName =>
+    `Author Name: ${authorName}`;
 
-console.log(getAuthorMessage("Rabindranath Tagore"));
+console.log(
+    getAuthorMessageRegular("Rabindranath Tagore")
+);
+
+console.log(
+    getAuthorMessageArrow("Rabindranath Tagore")
+);
 
 
-// --------------------------------------------------
-// Example 5: With two number parameters
-// --------------------------------------------------
+// ==================================================
+// Example 5: Two Number Parameters
+// ==================================================
 
-let sayHello = (firstNumber, secondNumber) => {
+// Regular Function
+function sayHelloRegular(firstNumber, secondNumber) {
+    console.log("Hello!");
+    console.log("First Number:", firstNumber);
+    console.log("Second Number:", secondNumber);
+}
+
+// Arrow Function
+const sayHelloArrow = (firstNumber, secondNumber) => {
     console.log("Hello!");
     console.log("First Number:", firstNumber);
     console.log("Second Number:", secondNumber);
 };
 
-sayHello(10, 20);
+sayHelloRegular(10, 20);
+sayHelloArrow(10, 20);
 
 
-// --------------------------------------------------
-// Example 6: Arrow function as a callback
-// --------------------------------------------------
-
-// setTimeout receives the arrow function as an argument.
-// 3000 milliseconds = 3 seconds.
+// ==================================================
+// Example 6: Callback Function with setTimeout
+// ==================================================
 
 console.log("Before setTimeout");
 
+// Regular Function Callback
+setTimeout(function () {
+    console.log("Regular Function Callback");
+}, 3000);
+
+// Arrow Function Callback
 setTimeout(() => {
-    console.log("Test");
-    console.log("The timer callback has executed.");
+    console.log("Arrow Function Callback");
 }, 3000);
 
 console.log("After setTimeout");
-
-// Output order:
-// Before setTimeout
-// After setTimeout
-// Test
-// The timer callback has executed.
