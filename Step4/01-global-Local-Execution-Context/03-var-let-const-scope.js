@@ -1,7 +1,7 @@
 // ==========================================================
 // JavaScript Block Scope Example
 // ==========================================================
-// var   -> Function-scoped, accessible outside the block
+// var   -> global-scoped, accessible outside the block
 // let   -> Block-scoped, accessible only inside the block
 // const -> Block-scoped, accessible only inside the block
 //

@@ -7,7 +7,7 @@ function showEmployeeDetails(name) {
     // name is a parameter and employeeRole is a local variable.
     let employeeRole = "Developer";
 
-    debugger;
+    //debugger;
 
     console.log("Company Name:", companyName);
     console.log("Employee Name:", name);
@@ -22,7 +22,6 @@ showEmployeeDetails(employeeName);
 
 
 console.log("Back in the global execution context");
-
 showEmployeeDetails("Ravi");
 
 // ❌ employeeRole is local to showEmployeeDetails.

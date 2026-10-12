@@ -8,7 +8,8 @@ Each room's fan speed represents a local variable.
 var signalName = "Wi-Fi";
 
 // Function 1
-function roomOne() {
+//function roomOne() {
+{
     // Local variable: accessible only inside roomOne.
     let roomOneFanSpeed = "Fast";
 
@@ -17,10 +18,12 @@ function roomOne() {
 
     // Cannot access the local variable from roomTwo.
     // console.log(roomTwoFanSpeed); // ReferenceError
+//}
 }
 
 // Function 2
-function roomTwo() {
+//function roomTwo() {
+{
     // Local variable: accessible only inside roomTwo.
     let roomTwoFanSpeed = "Slow";
 
@@ -29,13 +32,14 @@ function roomTwo() {
 
     // Cannot access the local variable from roomOne.
     // console.log(roomOneFanSpeed); // ReferenceError
+//}
 }
 
 // Calling the functions
-roomOne();
-roomTwo();
+// roomOne();
+// roomTwo();
 
-console.log("Outside Both Functions - Signal:", signalName);
+console.log("Outside - Signal:", signalName);
 
 // Local variables are not accessible outside their functions.
 // Uncomment ONE line at a time to demonstrate the error.
