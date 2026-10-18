@@ -1,28 +1,34 @@
 // The constructor stores properties on each new object.
-
-function Car() {
-    this.brand = "Toyota";
-    this.model = "Camry";
-    this.color = "Red";
+function Car(carName, color) {
+    this.carName = carName;
+    this.color = color;
 }
 
-// The method is stored on the prototype.
-Car.prototype.getCarInfo = function () {
-    // When called as carOne.getCarInfo(),
-    // this refers to carOne.
-    console.log("Brand:", this.brand);
-    console.log("Model:", this.model);
-    console.log("Color:", this.color);
+// Both cars share this prototype method.
+Car.prototype.startEngine = function () {
+    // this refers to the car that calls the method.
+
+    console.log("what is `this` ? Here"  , this);
+    console.log("🚗 Car Name:", this.carName);
+    console.log("🎨 Color:", this.color);
+    console.log("⚙️ Engine started");
 };
 
-var carOne = new Car();
+// Create the two cars shown in the slide.
+const carOne = new Car("Car 1", "Red");
+const carTwo = new Car("Car 2", "Blue");
 
-console.log("Car Object:", carOne);
-carOne.getCarInfo();
+// this refers to carOne.
+carOne.startEngine();
 
-// Update a property on the object
+// this refers to carTwo.
+carTwo.startEngine();
+
+// Update only Car 1's color.
 carOne.color = "White";
 
-// The same method now displays the updated color.
-console.log("After Updating the Color:");
-carOne.getCarInfo();
+console.log("After updating Car 1:");
+carOne.startEngine(); // White
+
+console.log("Car 2:");
+carTwo.startEngine(); // Blue

@@ -1,5 +1,4 @@
 // A function also has properties, such as name and length.
-
 function Car(brandName, modelName) {
     console.log("Brand:", brandName);
     console.log("Model:", modelName);

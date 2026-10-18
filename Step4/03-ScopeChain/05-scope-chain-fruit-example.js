@@ -1,5 +1,4 @@
-// Scope chain: JavaScript searches the current scope first,
-// then continues through the enclosing scopes.
+// Scope chain: JavaScript searches the current scope first,then continues through the enclosing scopes.
 
 // Scope 1
 {

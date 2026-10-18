@@ -14,4 +14,8 @@ var carOne = new Car();
 console.log("Car One:", carOne);
 console.log("Type of Car One:", typeof carOne); // object
 
-// The object has no own properties yet.
+
+//The object has no own properties yet.
+
+
+

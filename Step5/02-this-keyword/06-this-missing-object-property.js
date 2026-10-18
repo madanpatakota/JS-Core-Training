@@ -26,6 +26,8 @@ author.getDetails();
 // Add the missing property to the object
 author.dateOfBirth = dateOfBirth;
 
+console.log("Now Author is " , author);
+
 console.log("After adding the object property:");
 author.getDetails();
 
