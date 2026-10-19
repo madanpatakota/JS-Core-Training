@@ -1,10 +1,10 @@
 // Logical AND: &&
 // With Boolean inputs, the result is true only when both are true.
 
-console.log("true && true:", true && true); // true
-console.log("true && false:", true && false); // false
-console.log("false && true:", false && true); // false
-console.log("false && false:", false && false); // false
+console.log("true && true:", true    && true);   // true
+console.log("true && false:", true   && false);  // false
+console.log("false && true:", false  && true);   // false
+console.log("false && false:", false && false);  // false
 
 // Example: Both employee details must match.
 let employeeID = 1;
